@@ -32,7 +32,7 @@ function Publication({ title, authors, year, publishedIn, doi, url }) {
           ) : (
             { title }
           )}
-          <p className=" max-w-none text-gray-300">
+          <p className=" max-w-none dark:text-gray-300">
             {`${authors.join(', ')} | ${publishedIn} | ${year}`}
             {doi && <Doi doi={doi}></Doi>}
           </p>
