@@ -1,0 +1,48 @@
+{
+  "members": [
+    {
+      "name": "Homer Simpson",
+      "category": "faculty",
+      "role": "Staff",
+      "imageUrl": "/static/images/members/homer.avif",
+      "orcid": "https://orcid.org/1234",
+      "dissertation": "https://www.dropbox.com/s/6e6sb48108h5oze/Hydrogen-Car-Capsule.pdf"
+    },
+    {
+      "name": "Marge Simpson",
+      "category": "faculty",
+      "role": "Staff",
+      "imageUrl": "/static/images/members/marge.png"
+    },
+    {
+      "name": "Lisa Simpson",
+      "category": "phd",
+      "role": "Assistant",
+      "imageUrl": "/static/images/members/lisa.jpeg"
+    },
+    {
+      "name": "Ned Flanders",
+      "category": "phd",
+      "role": "Student",
+      "imageUrl": ""
+    },
+    {
+      "name": "Bart Simpson",
+      "category": "masters",
+      "role": "Skater",
+      "imageUrl": "/static/images/members/bart.webp"
+    },
+    {
+      "name": "Maggie Simpson",
+      "category": "honours",
+      "role": "Baby",
+      "imageUrl": "/static/images/members/maggie.png"
+    },
+    {
+      "name": "Abe Simpson",
+      "category": "alumni",
+      "role": "Old man",
+      "imageUrl": "/static/images/members/abe.png"
+    }
+  ]
+}

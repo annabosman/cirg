@@ -1,0 +1,28 @@
+{
+  "publications": [
+    {
+      "authors": ["Satoshi Nakamoto"],
+      "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+      "publishedIn": "bitcoin.org",
+      "doi": "https://bitcoin.org/bitcoin.pdf",
+      "url": "https://bitcoin.org/bitcoin.pdf",
+      "year": 2008
+    },
+    {
+      "authors": ["Satoshi Nakamoto"],
+      "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+      "publishedIn": "bitcoin.org",
+      "doi": "https://bitcoin.org/bitcoin.pdf",
+      "url": "https://bitcoin.org/bitcoin.pdf",
+      "year": 2009
+    },
+    {
+      "authors": ["Satoshi Nakamoto"],
+      "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+      "publishedIn": "bitcoin.org",
+      "doi": "https://bitcoin.org/bitcoin.pdf",
+      "url": "https://bitcoin.org/bitcoin.pdf",
+      "year": 2008
+    }
+  ]
+}

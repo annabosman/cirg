@@ -3,7 +3,7 @@ import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
 
 export default function AuthorLayout({ children, frontMatter }) {
-  const { name, avatar, occupation, company, email, twitter, linkedin, github } = frontMatter
+  const { avatar, occupation, company, email, twitter, linkedin, github } = frontMatter
 
   return (
     <>
@@ -23,7 +23,6 @@ export default function AuthorLayout({ children, frontMatter }) {
               height="192px"
               className="h-48 w-48 rounded-full"
             />
-            <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
             <div className="flex space-x-3 pt-6">

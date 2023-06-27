@@ -1,101 +1,126 @@
-import Link from '@/components/Link'
-import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-import formatDate from '@/lib/utils/formatDate'
-
-import NewsletterForm from '@/components/NewsletterForm'
-
-const MAX_DISPLAY = 5
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
-
-  return { props: { posts } }
+  const initialDisplayPosts = posts.slice(0, 4)
+  return { props: { posts: initialDisplayPosts } }
 }
 
 export default function Home({ posts }) {
   return (
-    <>
-      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
+    <div>
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div
+          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          aria-hidden="true"
+        ></div>
+        <div className="lg:py-50 mx-auto py-20 sm:py-48">
+          <div className="text-center">
+            <div className="rounded-lg border-8 border-primary-750 bg-primary-700 bg-opacity-0  p-12 shadow-sm">
+              <h1 className="text-6xl font-bold tracking-tight  sm:text-6xl">
+                Computational Intelligence
+              </h1>
+              <h1 className="text-6xl font-bold tracking-tight  sm:text-6xl">Research Group</h1>
+              <p className="mt-6 text-lg leading-8">@ UNIVERSITY OF PRETORIA</p>
+            </div>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <a
+                href="#about"
+                className="rounded-md border-2  px-3.5 py-2.5 text-sm font-semibold  shadow-sm  hover:border-4 hover:border-primary-750 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
         </div>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
-            return (
-              <li key={slug} className="py-12">
-                <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <dl>
-                      <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date)}</time>
-                      </dd>
-                    </dl>
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-6">
-                        <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
-                            >
-                              {title}
-                            </Link>
-                          </h2>
-                          <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
-                        </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                          {summary}
-                        </div>
-                      </div>
-                      <div className="text-base font-medium leading-6">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                          aria-label={`Read "${title}"`}
-                        >
-                          Read more &rarr;
-                        </Link>
-                      </div>
-                    </div>
+        <div
+          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+          aria-hidden="true"
+        ></div>
+        <div className=" py-24 sm:py-32" id="about">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-4xl lg:text-center">
+              <p className="mt-2 text-3xl font-bold tracking-tight  underline decoration-primary-750 underline-offset-8 sm:text-4xl">
+                About
+              </p>
+              <p className="text-md mt-6 text-justify leading-8 ">
+                The Computational Intelligence Research Group (CIRG) focuses on various aspects of
+                fundamental and applied computational intelligence and machine learning research.
+                Nature-inspired algorithms such as artificial neural networks, deep learning
+                methods, self-organizing maps, particle swarm optimization and evolutionary
+                computing are studied both theoretically and practically. Real-life applications
+                include computer vision, data mining and anomaly detection.
+              </p>
+              <div>
+                <div className="px-4 sm:px-0">
+                  <p className="mt-20 text-3xl font-bold tracking-tight  underline decoration-primary-750 underline-offset-8 sm:text-4xl">
+                    Research Fields
+                  </p>
+                </div>
+                <div className="mt-10 grid grid-cols-5 gap-x-0 gap-y-0 align-middle	dark:border-gray-600">
+                  <div className="border-b border-r p-6 dark:border-gray-600">
+                    Artificial Neural Networks
+                  </div>
+                  <div className="border-b border-r p-6 dark:border-gray-600">Deep Learning</div>
+                  <div className="border-r border-b p-6 dark:border-gray-600">
+                    Swarm Intelligence
+                  </div>
+                  <div className="border-r border-b  p-6 dark:border-gray-600">
+                    Evolutionary Computation
+                  </div>
+                  <div className=" border-b p-6 dark:border-gray-600">Machine Learning</div>
+                  <div className="border-r p-6 dark:border-gray-600">Anomaly Detection</div>
+                  <div className="border-r p-6 dark:border-gray-600 ">Self-Organizing Maps</div>
+                  <div className="border-r p-6 dark:border-gray-600">Computer Vision</div>
+                  <div className="border-r p-6 dark:border-gray-600">Data and Text Mining</div>
+                  <div className="p-6">Fitness Landscape Analysis</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <div className="mx-auto px-0 lg:px-8">
+            <h2 className="text-center text-3xl font-bold tracking-tight underline decoration-primary-750 underline-offset-8 sm:text-4xl">
+              Lastest news
+            </h2>
+            <div className="mt-10 grid grid-cols-3 gap-x-20">
+              {posts.map((post, index) => (
+                <article
+                  key={index}
+                  className="border-l-1 flex max-w-xl flex-col items-start justify-between p-2   leading-8"
+                >
+                  {/* <div className="flex items-center gap-x-4 text-xs">
+                    <a
+                      href={`/blog/${post.slug}`}
+                      className="relative z-10 rounded-full  px-3 py-1.5 font-medium "
+                    >
+                      {post.title}
+                    </a>
+                    <p>{post.summary}</p>
+                  </div> */}
+                  <div className="group relative">
+                    <time className="text-xs text-gray-500">{`${post.date.split('T')[0]}`}</time>
+                    <span>
+                      {' '}
+                      <h3 className="text-lg font-semibold leading-6 text-primary-750">
+                        <a href={`/blog/${post.slug}`}>
+                          <span className="absolute inset-0" />
+                          {post.title}
+                        </a>
+                      </h3>
+                    </span>
+                    <p>{post.summary}</p>
                   </div>
                 </article>
-              </li>
-            )
-          })}
-        </ul>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className=" mx-4 mt-20 mb-0 flex flex-col items-center">
+          <img src="/static/images/faculty_logo.png" className="max-w-sm"></img>
+        </div>
       </div>
-      {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base font-medium leading-6">
-          <Link
-            href="/blog"
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label="all posts"
-          >
-            All Posts &rarr;
-          </Link>
-        </div>
-      )}
-      {siteMetadata.newsletter.provider !== '' && (
-        <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
-        </div>
-      )}
-    </>
+    </div>
   )
 }

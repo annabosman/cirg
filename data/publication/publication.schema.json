@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "publications": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "authors": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "title": {
+              "type": "string"
+            },
+            "publishedIn": {
+              "type": "string"
+            },
+            "doi": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            },
+            "year": {
+              "type": "integer"
+            }
+          },
+          "required": ["authors", "title", "publishedIn", "url", "year"]
+        }
+      ]
+    }
+  },
+  "required": ["publications"]
+}

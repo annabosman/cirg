@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "members": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string",
+              "enum": ["faculty", "phd", "masters", "honours", "alumni"]
+            },
+            "imageUrl": {
+              "type": "string"
+            },
+            "orcid": {
+              "type": "string"
+            },
+            "dissertation": {
+              "type": "string"
+            }
+          },
+          "required": ["name", "role", "category", "imageUrl"]
+        }
+      ]
+    }
+  },
+  "required": ["members"]
+}
