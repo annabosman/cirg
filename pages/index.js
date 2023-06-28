@@ -17,11 +17,11 @@ export default function Home({ posts }) {
         <div className="lg:py-50 mx-auto py-20 sm:py-48">
           <div className="text-center">
             <div className="rounded-lg border-8 border-primary-750 bg-primary-700 bg-opacity-0  p-12 shadow-sm">
-              <h1 className="text-6xl font-bold tracking-tight  sm:text-6xl">
+              <h1 className="text-4xl font-bold tracking-tight  md:text-6xl">
                 Computational Intelligence
               </h1>
-              <h1 className="text-6xl font-bold tracking-tight  sm:text-6xl">Research Group</h1>
-              <p className="mt-6 text-lg leading-8">@ UNIVERSITY OF PRETORIA</p>
+              <h1 className="text-4xl font-bold tracking-tight  md:text-6xl">Research Group</h1>
+              <p className="text-md mt-6 leading-8 sm:text-lg">@ UNIVERSITY OF PRETORIA</p>
             </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
@@ -37,10 +37,10 @@ export default function Home({ posts }) {
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
           aria-hidden="true"
         ></div>
-        <div className=" py-24 sm:py-32" id="about">
+        <div className="py-24 sm:py-32" id="about">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-4xl lg:text-center">
-              <p className="mt-2 text-3xl font-bold tracking-tight  underline decoration-primary-750 underline-offset-8 sm:text-4xl">
+              <p className="mt-2 text-3xl font-bold tracking-tight underline decoration-primary-750 underline-offset-8 sm:text-4xl">
                 About
               </p>
               <p className="text-md mt-6 text-justify leading-8 ">
@@ -52,28 +52,46 @@ export default function Home({ posts }) {
                 include computer vision, data mining and anomaly detection.
               </p>
               <div>
-                <div className="px-4 sm:px-0">
-                  <p className="mt-20 text-3xl font-bold tracking-tight  underline decoration-primary-750 underline-offset-8 sm:text-4xl">
+                <div className="max-w-4xl px-6 sm:px-0">
+                  <p className="mt-20 text-3xl font-bold tracking-tight underline decoration-primary-750 underline-offset-8 sm:text-4xl">
                     Research Fields
                   </p>
-                </div>
-                <div className="mt-10 grid grid-cols-5 gap-x-0 gap-y-0 align-middle	dark:border-gray-600">
-                  <div className="border-b border-r p-6 dark:border-gray-600">
-                    Artificial Neural Networks
+                  <div className="mt-10 grid grid-cols-1 dark:border-gray-600 lg:grid-cols-2	lg:place-items-center">
+                    <div>
+                      <ul className="w-1/2 sm:w-full">
+                        <li className="w-full border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
+                          Deep Learning
+                        </li>
+                        <li className="w-full border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
+                          Swarm Intelligence
+                        </li>
+                        <li className="w-full border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
+                          Evolutionary Computation
+                        </li>
+                        <li className="w-full border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
+                          Machine Learning
+                        </li>
+                        <li className="w-full py-4">Anomaly Detection</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <ul className="w-1/2 sm:w-full">
+                        <li className="w-full border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
+                          Self-Organizing Maps
+                        </li>
+                        <li className="w-full border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
+                          Computer Vision
+                        </li>
+                        <li className="w-full border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
+                          Data and Text Mining
+                        </li>
+                        <li className="w-full border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
+                          Fitness Landscape Analysis
+                        </li>
+                        <li className="w-full py-4">Artificial Neural Networks</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div className="border-b border-r p-6 dark:border-gray-600">Deep Learning</div>
-                  <div className="border-r border-b p-6 dark:border-gray-600">
-                    Swarm Intelligence
-                  </div>
-                  <div className="border-r border-b  p-6 dark:border-gray-600">
-                    Evolutionary Computation
-                  </div>
-                  <div className=" border-b p-6 dark:border-gray-600">Machine Learning</div>
-                  <div className="border-r p-6 dark:border-gray-600">Anomaly Detection</div>
-                  <div className="border-r p-6 dark:border-gray-600 ">Self-Organizing Maps</div>
-                  <div className="border-r p-6 dark:border-gray-600">Computer Vision</div>
-                  <div className="border-r p-6 dark:border-gray-600">Data and Text Mining</div>
-                  <div className="p-6">Fitness Landscape Analysis</div>
                 </div>
               </div>
             </div>
