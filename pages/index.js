@@ -9,18 +9,18 @@ export async function getStaticProps() {
 export default function Home({ posts }) {
   return (
     <div>
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <div className="relative isolate pt-14 sm:px-6 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
         ></div>
-        <div className="lg:py-50 mx-auto py-20 sm:py-48">
+        <div className="lg:py-50 mx-auto py-20 sm:pb-48 sm:pt-40">
           <div className="text-center">
             <div className="rounded-lg border-8 border-primary-750 bg-primary-700 bg-opacity-0  p-12 shadow-sm">
-              <h1 className="text-4xl font-bold tracking-tight  md:text-6xl">
+              <h1 className="text-3xl font-bold tracking-tight  md:text-6xl">
                 Computational Intelligence
               </h1>
-              <h1 className="text-4xl font-bold tracking-tight  md:text-6xl">Research Group</h1>
+              <h1 className="text-3xl font-bold tracking-tight  md:text-6xl">Research Group</h1>
               <p className="text-md mt-6 leading-8 sm:text-lg">@ UNIVERSITY OF PRETORIA</p>
             </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
