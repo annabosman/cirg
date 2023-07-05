@@ -61,7 +61,7 @@ module.exports = withBundleAnalyzer({
   images: {
     unoptimized: true,
   },
-  basePath: '',
+  basePath: '/cirg',
   async headers() {
     return [
       {
